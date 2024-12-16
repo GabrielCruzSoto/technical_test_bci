@@ -1,0 +1,75 @@
+# README del Proyecto TechnicalTestBCI
+
+## Descripción
+
+Este proyecto es una aplicación construida con Spring Boot que proporciona una API para la gestión de usuarios y autenticación. Utiliza Swagger para la documentación de la API y permite a los desarrolladores interactuar con los endpoints de manera sencilla.
+
+## Requisitos
+
+- **Java**: 17
+- **Spring Boot**: 3.3.4
+
+## Estructura del Proyecto
+
+El proyecto sigue la estructura estándar de un proyecto Spring Boot, con las siguientes carpetas principales:
+
+- `src/main/java`: Contiene el código fuente de la aplicación.
+- `src/main/resources`: Contiene los recursos de la aplicación, como archivos de configuración.
+- `src/test/java`: Contiene las pruebas unitarias.
+
+## Despliegue
+
+Para desplegar la aplicación, sigue estos pasos:
+
+1. **Clona el repositorio**:
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   cd technicaltestbci
+   ```
+
+2. **Construye el proyecto**:
+   Asegúrate de tener Gradle instalado y ejecuta:
+   ```bash
+   ./gradlew build
+   ```
+
+3. **Ejecuta la aplicación**:
+   ```bash
+   ./gradlew bootRun
+   ```
+
+## Acceso a Swagger
+
+Una vez que la aplicación esté en ejecución, puedes acceder a la documentación de la API a través de Swagger en la siguiente URL: http://localhost:8080/swagger-ui/index.html
+
+## Rutas de la API
+
+A continuación se presentan algunas de las rutas disponibles en la API:
+
+- **Autenticación**:
+  - `POST /auth/login`: Iniciar sesión.
+  
+- **Gestión de Usuarios**:
+  - `POST /user/register`: Registrar un nuevo usuario.
+  - `GET /user/{email}`: Obtener información de un usuario por su email.
+  - `GET /user/all`: Listar todos los usuarios.
+  - `GET /user/by-id/{id}/audit`: Obtener auditoría de inicio de sesión por ID.
+  - `GET /user/by-email/{email}/audit`: Obtener auditoría de inicio de sesión por email.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios y haz commit (`git commit -m 'Añadir nueva funcionalidad'`).
+4. Haz push a la rama (`git push origin feature/nueva-funcionalidad`).
+5. Abre un Pull Request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia Apache 2.0. Para más detalles, consulta el archivo `LICENSE`.
+
+---
+
+Este README proporciona una visión general del proyecto y cómo interactuar con él. Si tienes alguna pregunta o necesitas más información, no dudes en preguntar.
